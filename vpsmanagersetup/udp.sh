@@ -28,7 +28,7 @@ if [[ "$resposta" = 's' ]]; then
 	sleep 3
 	apt-get update -y
 	apt-get install screen wget gcc build-essential g++ make -y
-	wget http://www.cmake.org/files/v2.8/cmake-2.8.12.tar.gz
+	wget https://github.com/dhymi/sh/blob/master/vpsmanagersetup/cmake-2.8.12.tar.gz
 	tar xvzf cmake*.tar.gz
 	cd cmake*
 	./bootstrap --prefix=/usr
@@ -38,7 +38,7 @@ if [[ "$resposta" = 's' ]]; then
 	rm -r cmake*
 	mkdir badvpn-build
 	cd badvpn-build
-	wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/badvpn/badvpn-1.999.128.tar.bz2
+	wget https://github.com/dhymi/sh/blob/master/vpsmanagersetup/badvpn-1.999.128.tar.bz2
 	tar xf badvpn-1.999.128.tar.bz2
 	cd bad*
 	cmake -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_UDPGW=1
