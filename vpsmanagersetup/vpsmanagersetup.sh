@@ -77,37 +77,37 @@ if [ -f "/usr/sbin/ufw" ] ; then
 fi
 if [ -d "/etc/squid3/" ]
 then
-	wget http://phreaker56.xyz/vpsmanager/squid1.txt -O /tmp/sqd1
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/squid1.txt -O /tmp/sqd1
 	echo "acl url3 dstdomain -i $ipdovps" > /tmp/sqd2
-	wget http://phreaker56.xyz/vpsmanager/squid2.txt -O /tmp/sqd3
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/squid2.txt -O /tmp/sqd3
 	cat /tmp/sqd1 /tmp/sqd2 /tmp/sqd3 > /etc/squid3/squid.conf
-	wget http://phreaker56.xyz/vpsmanager/payload.txt -O /etc/squid3/payload.txt
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/payload.txt
 	echo " " >> /etc/squid3/payload.txt
 	grep -v "^Port 443" /etc/ssh/sshd_config > /tmp/ssh && mv /tmp/ssh /etc/ssh/sshd_config
 	echo "Port 443" >> /etc/ssh/sshd_config
 	grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
 	echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-	wget http://phreaker56.xyz/vpsmanager/scripts/addhost.sh -O /bin/addhost
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/addhost.sh -O /bin/addhost
 	chmod +x /bin/addhost
-	wget http://phreaker56.xyz/vpsmanager/scripts/alterarsenha.sh -O /bin/alterarsenha
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/alterarsenha.sh -O /bin/alterarsenha
 	chmod +x /bin/alterarsenha
-	wget http://phreaker56.xyz/vpsmanager/scripts/criarusuario2.sh -O /bin/criarusuario
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/criarusuario2.sh -O /bin/criarusuario
 	chmod +x /bin/criarusuario
-	wget http://phreaker56.xyz/vpsmanager/scripts/delhost.sh -O /bin/delhost
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/delhost.sh -O /bin/delhost
 	chmod +x /bin/delhost
-	wget http://phreaker56.xyz/vpsmanager/scripts/expcleaner2.sh -O /bin/expcleaner
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/expcleaner2.sh -O /bin/expcleaner
 	chmod +x /bin/expcleaner
-	wget http://phreaker56.xyz/vpsmanager/scripts/mudardata.sh -O /bin/mudardata
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/mudardata.sh -O /bin/mudardata
 	chmod +x /bin/mudardata
-	wget http://phreaker56.xyz/vpsmanager/scripts/remover.sh -O /bin/remover
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/remover.sh -O /bin/remover
 	chmod +x /bin/remover
-	wget http://phreaker56.xyz/vpsmanager/scripts/sshlimiter2.sh -O /bin/sshlimiter
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/sshlimiter2.sh -O /bin/sshlimiter
 	chmod +x /bin/sshlimiter
-	wget http://phreaker56.xyz/vpsmanager/scripts/alterarlimite.sh -O /bin/alterarlimite
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/alterarlimite.sh -O /bin/alterarlimite
 	chmod +x /bin/alterarlimite
-	wget http://phreaker56.xyz/vpsmanager/scripts/ajuda.sh -O /bin/ajuda
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/ajuda.sh -O /bin/ajuda
 	chmod +x /bin/ajuda
-	wget http://phreaker56.xyz/vpsmanager/scripts/sshmonitor2.sh -O /bin/sshmonitor
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/sshmonitor2.sh -O /bin/sshmonitor
 	chmod +x /bin/sshmonitor
 	if [ ! -f "/etc/init.d/squid3" ]
 	then
@@ -124,37 +124,37 @@ then
 fi
 if [ -d "/etc/squid/" ]
 then
-	wget http://phreaker56.xyz/vpsmanager/squid1.txt -O /tmp/sqd1
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/squid1.txt -O /tmp/sqd1
 	echo "acl url3 dstdomain -i $ipdovps" > /tmp/sqd2
-	wget http://phreaker56.xyz/vpsmanager/squid.txt -O /tmp/sqd3
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/squid1.txt -O /tmp/sqd3
 	cat /tmp/sqd1 /tmp/sqd2 /tmp/sqd3 > /etc/squid/squid.conf
-	wget http://phreaker56.xyz/vpsmanager/payload.txt -O /etc/squid/payload.txt
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/payload.txt
 	echo " " >> /etc/squid/payload.txt
 	grep -v "^Port 443" /etc/ssh/sshd_config > /tmp/ssh && mv /tmp/ssh /etc/ssh/sshd_config
 	echo "Port 443" >> /etc/ssh/sshd_config
 	grep -v "^PasswordAuthentication yes" /etc/ssh/sshd_config > /tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
 	echo "PasswordAuthentication yes" >> /etc/ssh/sshd_config
-	wget http://phreaker56.xyz/vpsmanager/scripts/2/addhost.sh -O /bin/addhost
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/2/addhost.sh -O /bin/addhost
 	chmod +x /bin/addhost
-	wget http://phreaker56.xyz/vpsmanager/scripts/alterarsenha.sh -O /bin/alterarsenha
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/alterarsenha.sh -O /bin/alterarsenha
 	chmod +x /bin/alterarsenha
-	wget http://phreaker56.xyz/vpsmanager/scripts/criarusuario2.sh -O /bin/criarusuario
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/criarusuario2.sh -O /bin/criarusuario
 	chmod +x /bin/criarusuario
-	wget http://phreaker56.xyz/vpsmanager/scripts/2/delhost.sh -O /bin/delhost
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/2/delhost.sh -O /bin/delhost
 	chmod +x /bin/delhost
-	wget http://phreaker56.xyz/vpsmanager/scripts/expcleaner2.sh -O /bin/expcleaner
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/expcleaner2.sh -O /bin/expcleaner
 	chmod +x /bin/expcleaner
-	wget http://phreaker56.xyz/vpsmanager/scripts/mudardata.sh -O /bin/mudardata
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/mudardata.sh -O /bin/mudardata
 	chmod +x /bin/mudardata
-	wget http://phreaker56.xyz/vpsmanager/scripts/remover.sh -O /bin/remover
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/remover.sh -O /bin/remover
 	chmod +x /bin/remover
-	wget http://phreaker56.xyz/vpsmanager/scripts/sshlimiter2.sh -O /bin/sshlimiter
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/sshlimiter2.sh -O /bin/sshlimiter
 	chmod +x /bin/sshlimiter
-	wget http://phreaker56.xyz/vpsmanager/scripts/alterarlimite.sh -O /bin/alterarlimite
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/alterarlimite.sh -O /bin/alterarlimite
 	chmod +x /bin/alterarlimite
-	wget http://phreaker56.xyz/vpsmanager/scripts/ajuda.sh -O /bin/ajuda
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/ajuda.sh -O /bin/ajuda
 	chmod +x /bin/ajuda
-	wget http://phreaker56.xyz/vpsmanager/scripts/sshmonitor2.sh -O /bin/sshmonitor
+	wget https://raw.githubusercontent.com/dhymi/sh/master/vpsmanagersetup/vpsmanager/scripts/sshmonitor2.sh -O /bin/sshmonitor
 	chmod +x /bin/sshmonitor
 	if [ ! -f "/etc/init.d/squid" ]
 	then
